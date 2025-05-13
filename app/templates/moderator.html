@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Moderator Dashboard</h2>
+    <p>Welcome, {{ session.get('username') }}! You can manage user content.</p>
+
+    <ul>
+        <li><a href="{{ url_for('review_posts') }}">Review Posts</a></li>
+        <li><a href="{{ url_for('flagged_content') }}">Flagged Content</a></li>
+    </ul>
+{% endblock %}

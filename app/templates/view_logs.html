@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>System Logs</h2>
+    <p>Logs from the system operations (errors, warnings, login attempts, etc.)</p>
+
+    <pre>
+        [2025-05-05 10:22:00] INFO: User admin logged in
+        [2025-05-05 10:25:14] WARNING: Invalid login attempt
+        ...
+    </pre>
+{% endblock %}

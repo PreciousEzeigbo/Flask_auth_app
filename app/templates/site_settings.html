@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Site Settings</h2>
+    <p>Admin can manage global site settings from this page.</p>
+
+    <form method="POST" action="{{ url_for('site_settings') }}">
+        <label for="site_name">Site Name:</label>
+        <input type="text" id="site_name" name="site_name" value="My Flask App"><br><br>
+
+        <label for="maintenance_mode">Maintenance Mode:</label>
+        <select name="maintenance_mode" id="maintenance_mode">
+            <option value="off">Off</option>
+            <option value="on">On</option>
+        </select><br><br>
+
+        <button type="submit">Save Changes</button>
+    </form>
+{% endblock %}
